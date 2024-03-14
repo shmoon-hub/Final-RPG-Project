@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class Mover : MonoBehaviour
 {
     [SerializeField] Transform target; // 이동 타겟 지정
@@ -39,15 +40,25 @@ public class Mover : MonoBehaviour
     
 }
 
-/*       마우스가 아닌 키보드를 이용해서 캐릭터 이동하는 코드
+/*         // 마우스가 아닌 키보드를 이용해서 움직이도록 함 -> 아직 navmesh agent는 적용 안됨
 public class Mover : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f; // 캐릭터 이동 속도
 
+    private NavMeshAgent navMeshAgent; // NavMeshAgent 컴포넌트를 저장할 변수
+
+    void Start()
+    {
+        // NavMeshAgent 컴포넌트를 가져와 변수에 저장
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        // 초기 속도 설정
+        navMeshAgent.speed = moveSpeed;
+    }
+
     void Update()
     {
         // 키 입력을 감지하여 이동 방향을 설정
-        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));  // horizontal은 좌우이동 vertiacl은 앞뒤 이동을 나타낸다.
+        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         movementInput = Vector3.ClampMagnitude(movementInput, 1f); // 입력 벡터의 크기를 1로 제한하여 대각선 이동 속도를 유지
 
         // 캐릭터를 이동 방향으로 이동
@@ -59,9 +70,8 @@ public class Mover : MonoBehaviour
         // 입력된 이동 방향이 존재하면
         if (direction != Vector3.zero)
         {
-            // 이동 방향으로 이동하도록 설정
-            Vector3 movement = direction * moveSpeed * Time.deltaTime;
-            transform.Translate(movement, Space.World);
+            // NavMeshAgent의 이동 방향 설정
+            navMeshAgent.Move(direction * moveSpeed * Time.deltaTime);
         }
     }
 }
