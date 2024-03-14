@@ -4,11 +4,10 @@
 //   레이캐스팅은 마우스를 클릭해서 움직임을    //
 //   나타낼때 사용된다.                       //
 ////////////////////////////////////////////////
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;       // navMeshAgent를 사용하기 위해 import
+using UnityEngine.AI;
 
 public class Mover : MonoBehaviour
 {
@@ -39,3 +38,31 @@ public class Mover : MonoBehaviour
          
     
 }
+
+/*       마우스가 아닌 키보드를 이용해서 캐릭터 이동하는 코드
+public class Mover : MonoBehaviour
+{
+    [SerializeField] float moveSpeed = 5f; // 캐릭터 이동 속도
+
+    void Update()
+    {
+        // 키 입력을 감지하여 이동 방향을 설정
+        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));  // horizontal은 좌우이동 vertiacl은 앞뒤 이동을 나타낸다.
+        movementInput = Vector3.ClampMagnitude(movementInput, 1f); // 입력 벡터의 크기를 1로 제한하여 대각선 이동 속도를 유지
+
+        // 캐릭터를 이동 방향으로 이동
+        MoveCharacter(movementInput);
+    }
+
+    void MoveCharacter(Vector3 direction)
+    {
+        // 입력된 이동 방향이 존재하면
+        if (direction != Vector3.zero)
+        {
+            // 이동 방향으로 이동하도록 설정
+            Vector3 movement = direction * moveSpeed * Time.deltaTime;
+            transform.Translate(movement, Space.World);
+        }
+    }
+}
+*/
