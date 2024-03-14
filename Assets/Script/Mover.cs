@@ -22,6 +22,7 @@ public class Mover : MonoBehaviour
         {
             MoveToCursor();
         }
+        UpdateAnimator();
     }
 
     private void MoveToCursor()
@@ -34,8 +35,14 @@ public class Mover : MonoBehaviour
             GetComponent<NavMeshAgent>().destination = hit.point; // hasHit이 true이면 내비메시 에이전트의 목적지를 레이캐스트 중돌지점으로 변경
         }
     }
-        //Debug.DrawRay(lastRay.origin, lastRay.direction * 100);         // 100을 곱하는 이유는 먼거리까지 Ray가 그려질 것이기 때문이다.
-
+      
+    private void UpdateAnimator()
+    {
+        Vector3 velocity = GetComponent<NavMeshAgent>().velocity;    // NavmeshAgent에서 global velocity를 가져온다.
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);    // 캐릭터에 연결된 로컬변수로 변환한다.
+        float speed = localVelocity.z;      // 전방으로 얼마나 빨리 움직이는지 알아보기 위해 z값으로 지정
+        GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+    }
          
     
 }
