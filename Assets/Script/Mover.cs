@@ -18,7 +18,7 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))   // 0은 왼쪽 1은 오른쪽 2는 중간버튼을 의미한다.
+        if(Input.GetMouseButton(0))   // 0은 왼쪽 1은 오른쪽 2는 중간버튼을 의미한다. , 마우스가 눌러져있는동안 true를 반환하고 싶으면 GetMouseButton으로 수정한다.
         {
             MoveToCursor();
         }
