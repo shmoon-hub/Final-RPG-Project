@@ -47,38 +47,54 @@ public class Mover : MonoBehaviour
     
 }
 
-/*         // 마우스가 아닌 키보드를 이용해서 움직이도록 함 -> 아직 navmesh agent는 적용 안됨
+/*      // 마우스가 아닌 키보드를 이용해서 움직이는 코드
+using UnityEngine;
+using UnityEngine.AI;
+
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f; // 캐릭터 이동 속도
-
-    private NavMeshAgent navMeshAgent; // NavMeshAgent 컴포넌트를 저장할 변수
+    NavMeshAgent agent;
+    Animator animator;
 
     void Start()
     {
-        // NavMeshAgent 컴포넌트를 가져와 변수에 저장
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        // 초기 속도 설정
-        navMeshAgent.speed = moveSpeed;
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // 키 입력을 감지하여 이동 방향을 설정
-        Vector3 movementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        movementInput = Vector3.ClampMagnitude(movementInput, 1f); // 입력 벡터의 크기를 1로 제한하여 대각선 이동 속도를 유지
-
-        // 캐릭터를 이동 방향으로 이동
-        MoveCharacter(movementInput);
+        bool hasMoved = Move();
+        UpdateAnimator(hasMoved);
     }
 
-    void MoveCharacter(Vector3 direction)
+    private bool Move()
     {
-        // 입력된 이동 방향이 존재하면
-        if (direction != Vector3.zero)
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
+        
+        if (inputDirection.sqrMagnitude > 0.1f) // 입력이 있는지 감지하기 위해 약간의 임계값 설정
         {
-            // NavMeshAgent의 이동 방향 설정
-            navMeshAgent.Move(direction * moveSpeed * Time.deltaTime);
+            agent.destination = transform.position + inputDirection; // NavMeshAgent를 사용한 이동 설정
+            return true;
+        }
+        return false;
+    }
+      
+    private void UpdateAnimator(bool hasMoved)
+    {
+        if (hasMoved)
+        {
+            // 전방으로 얼마나 빨리 움직이는지 계산하여 forwardSpeed 설정
+            Vector3 velocity = agent.velocity;
+            Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+            float forwardSpeed = localVelocity.z;
+            animator.SetFloat("forwardSpeed", forwardSpeed);
+        }
+        else
+        {
+            animator.SetFloat("forwardSpeed", 0);
         }
     }
 }
