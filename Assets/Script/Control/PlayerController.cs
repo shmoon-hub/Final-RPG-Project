@@ -20,3 +20,33 @@ public class PlayerController : MonoBehaviour {
         }
     }
 }
+
+
+
+//키보드를 이용해서 움직이는 부분
+// using UnityEngine;
+// using UnityEngine.AI;
+
+// public class PlayerController : MonoBehaviour
+// {
+//     private NavMeshAgent agent;
+//      public NavMeshAgent Agent => agent; // NavMeshAgent에 대한 공개 접근자 추가
+
+//     private void Awake()
+//     {
+//         agent = GetComponent<NavMeshAgent>();
+//     }
+
+//     public void Move()
+//     {
+//         float horizontal = Input.GetAxis("Horizontal");
+//         float vertical = Input.GetAxis("Vertical");
+//         Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
+        
+//         if (inputDirection.sqrMagnitude > 0.1f) // 입력이 있는지 감지하기 위해 약간의 임계값 설정
+//         {
+//             agent.destination = transform.position + inputDirection; // NavMeshAgent를 사용한 이동 설정
+//         }
+//     }
+// }
+
