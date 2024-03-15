@@ -36,8 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\FollowCamera.cs" />
-     <Compile Include="Assets\Script\Mover.cs" />
+     <Compile Include="Assets\Script\Control\PlayerController.cs" />
+     <Compile Include="Assets\Script\Movement\Mover.cs" />
+     <Compile Include="Assets\Script\Core\FollowCamera.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\MyAsset\Wand and Circles\Polygon City Free Pack - Environment and Interior\Materials\Double Sided Standard Diffuse Bump.shader" />
     <Reference Include="UnityEngine">
