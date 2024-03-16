@@ -1,6 +1,9 @@
+using RPG.Movement;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+namespace RPG.Control
+{
+    public class PlayerController : MonoBehaviour {
 
     private void Update() {
         if(Input.GetMouseButton(0))   // 0은 왼쪽 1은 오른쪽 2는 중간버튼을 의미한다. , 마우스가 눌러져있는동안 true를 반환하고 싶으면 GetMouseButton으로 수정한다.
@@ -20,6 +23,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 }
+}
+
 
 
 
@@ -27,26 +32,31 @@ public class PlayerController : MonoBehaviour {
 // using UnityEngine;
 // using UnityEngine.AI;
 
-// public class PlayerController : MonoBehaviour
+// namespace RPG.Control
 // {
-//     private NavMeshAgent agent;
-//      public NavMeshAgent Agent => agent; // NavMeshAgent에 대한 공개 접근자 추가
-
-//     private void Awake()
+//     public class PlayerController : MonoBehaviour
 //     {
-//         agent = GetComponent<NavMeshAgent>();
-//     }
+//         private NavMeshAgent agent;
+//         public NavMeshAgent Agent => agent; // NavMeshAgent에 대한 공개 접근자 추가
 
-//     public void Move()
-//     {
-//         float horizontal = Input.GetAxis("Horizontal");
-//         float vertical = Input.GetAxis("Vertical");
-//         Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
-        
-//         if (inputDirection.sqrMagnitude > 0.1f) // 입력이 있는지 감지하기 위해 약간의 임계값 설정
+//         private void Awake()
 //         {
-//             agent.destination = transform.position + inputDirection; // NavMeshAgent를 사용한 이동 설정
+//             agent = GetComponent<NavMeshAgent>();
+//         }
+
+//         public void Move()
+//         {
+//             float horizontal = Input.GetAxis("Horizontal");
+//             float vertical = Input.GetAxis("Vertical");
+//             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
+            
+//             if (inputDirection.sqrMagnitude > 0.1f) // 입력이 있는지 감지하기 위해 약간의 임계값 설정
+//             {
+//                 agent.destination = transform.position + inputDirection; // NavMeshAgent를 사용한 이동 설정
+//             }
 //         }
 //     }
 // }
+
+
 
