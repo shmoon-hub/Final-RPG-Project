@@ -69,7 +69,7 @@ namespace RPG.Control
 // {
 //     public class PlayerController : MonoBehaviour
 //     {
-//         public NavMeshAgent Agent => agent; // 기존 코드에 이 줄 추가
+//         public NavMeshAgent Agent => agent;
 
 //         private NavMeshAgent agent;
 
@@ -80,8 +80,9 @@ namespace RPG.Control
 
 //         private void Update()
 //         {
-//             if (InteractWithCombat()) return; // 공격 인터랙션에 성공하면 이동 인터랙션을 처리하지 않음
-//             InteractWithMovement();
+//             if (InteractWithCombat()) return;
+//             if (InteractWithMovement()) return;
+//             print("Nothing to do!");
 //         }
 
 //         private bool InteractWithCombat()
@@ -92,48 +93,45 @@ namespace RPG.Control
 //                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
 //                 if (target == null) continue;
                 
-//                 if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭 시
+//                 if (Input.GetMouseButtonDown(0))
 //                 {
 //                     GetComponent<Fighter>().Attack(target);
-//                     return true; // 공격 인터랙션이 처리되었음을 나타냄
+//                     return true;
 //                 }
 //             }
-//             return false; // 공격 인터랙션이 처리되지 않음
+//             return false;
 //         }
 
-//         private void InteractWithMovement()
+//         private bool InteractWithMovement()
 //         {
-//             if (Input.GetMouseButton(0)) // 마우스 왼쪽 버튼을 계속 누르고 있을 때
+//             if (Input.GetMouseButton(0))
 //             {
-//                 MoveToCursor();
+//                 if (MoveToCursor()) // Raycast가 히트했다면
+//                 {
+//                     return true;
+//                 }
 //             }
 //             else
 //             {
-//                 MoveWithKeyboard(); // 키보드 입력으로 이동 처리
+//                 GetComponent<Mover>().MoveWithKeyboard();
+//                 return true;
 //             }
+//             return false; // 마우스 클릭 위치가 맵 내부가 아닐 경우
 //         }
 
-//         private void MoveToCursor()
+//         private bool MoveToCursor() // bool 타입을 반환하도록 수정
 //         {
 //             RaycastHit hit;
 //             bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
 //             if (hasHit)
 //             {
 //                 agent.destination = hit.point;
+//                 return true; // 히트 성공
 //             }
+//             return false; // 히트 실패
 //         }
 
-//         private void MoveWithKeyboard()
-//         {
-//             float horizontal = Input.GetAxis("Horizontal");
-//             float vertical = Input.GetAxis("Vertical");
-//             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
-            
-//             if (inputDirection.sqrMagnitude > 0.01f) // 입력 감지 시
-//             {
-//                 agent.destination = transform.position + inputDirection; // NavMeshAgent를 이용하여 이동
-//             }
-//         }
+        
 
 //         private static Ray GetMouseRay()
 //         {

@@ -52,6 +52,15 @@ namespace RPG.Movement
 // {
 //     public class Mover : MonoBehaviour
 //     {
+//         private NavMeshAgent agent;
+
+//         private void Awake()
+//         {
+//             agent = GetComponent<NavMeshAgent>();
+//         }
+
+        
+
 //         Animator animator;
 //         PlayerController playerController;
 
@@ -64,6 +73,18 @@ namespace RPG.Movement
 //         void Update()
 //         {
 //             UpdateAnimator();
+//         }
+
+//         public void MoveWithKeyboard()
+//         {
+//             float horizontal = Input.GetAxis("Horizontal");
+//             float vertical = Input.GetAxis("Vertical");
+//             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
+            
+//             if (inputDirection.sqrMagnitude > 0.01f)
+//             {
+//                 agent.destination = transform.position + inputDirection;
+//             }
 //         }
         
 //         private void UpdateAnimator()
