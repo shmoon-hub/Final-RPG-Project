@@ -1,36 +1,5 @@
-// using UnityEngine;
-// using RPG.Movement;
-
-// namespace RPG.Combat
-// {
-//     public class Fighter : MonoBehaviour
-//     {
-//         [SerializeField] float weaponRange = 2f;
-
-//         Transform target; 
-
-//         private void Update() {
-//             bool isInRange = Vector3.Distance(transform.position, target.position) < weaponRange;
-//             if (target != null && !isInRange)
-//             {
-//                 GetComponent<Mover>().MoveTo(target.position);
-//             }
-//             else
-//             {
-//                 GetComponent<Mover>().Stop();
-//             }
-//         }
-
-//         public void Attack(CombatTarget combatTarget)
-//         {
-//             target = combatTarget.transform;
-//         }
-//     }
-// }
-
 using UnityEngine;
 using RPG.Movement;
-
 namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour
@@ -38,10 +7,11 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
 
         Transform target; 
+        private void Update()
+        {
+            if (target == null) return;
 
-        private void Update() {
-            bool isInRange = Vector3.Distance(transform.position, target.position) < weaponRange;
-            if (target != null && !isInRange)
+            if (!GetIsInRange())
             {
                 GetComponent<Mover>().MoveTo(target.position);
             }
@@ -51,9 +21,19 @@ namespace RPG.Combat
             }
         }
 
+        private bool GetIsInRange()
+        {
+            return Vector3.Distance(transform.position, target.position) < weaponRange;
+        }
+
         public void Attack(CombatTarget combatTarget)
         {
             target = combatTarget.transform;
+        }
+
+        public void Cancel()
+        {
+            target = null;
         }
     }
 }

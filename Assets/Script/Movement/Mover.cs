@@ -4,8 +4,11 @@
 //   레이캐스팅은 마우스를 클릭해서 움직임을    //
 //   나타낼때 사용된다.                       //
 ////////////////////////////////////////////////
+
+
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Combat;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,7 +20,7 @@ namespace RPG.Movement
 
         NavMeshAgent navMeshAgent;
 
-        
+
         private void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -28,6 +31,12 @@ namespace RPG.Movement
         void Update()
         {
             UpdateAnimator();
+        }
+
+        public void StartMoveAction(Vector3 destination)     // 추가된 부분
+        {
+            GetComponent<Fighter>().Cancel();
+            MoveTo(destination);
         }
 
         public void MoveTo(Vector3 destination)      // 메서드 추출 기능을 통해 새로운 메서드로 추출 , 외부에서 가져올수 있어야 하므로 public으로 변경
@@ -54,7 +63,83 @@ namespace RPG.Movement
 }
 
 
-// 마우스가 아닌 키보드를 이용해서 움직이는 코드
+// 마우스가 아닌 키보드를 이용해서 움직이는 코드 <새로 만든 코드>
+// using System.Collections;
+// using System.Collections.Generic;
+// using RPG.Combat;
+// using UnityEngine;
+// using UnityEngine.AI;
+
+// namespace RPG.Movement
+// {
+//     public class Mover : MonoBehaviour
+//     {
+//         [SerializeField] Transform target; // 이동 대상 지정
+
+//         NavMeshAgent navMeshAgent;
+
+
+//         private void Start()
+//         {
+//             navMeshAgent = GetComponent<NavMeshAgent>();
+//         }
+
+//         void Update()
+//         {
+//             UpdateAnimator();
+//             MoveWithKeyboard(); // Update 메소드에서 MoveWithKeyboard 호출
+//         }
+
+//         public void StartMoveAction(Vector3 destination)
+//         {
+//             GetComponent<Fighter>().Cancle(); // Cancel 메소드의 올바른 철자 확인
+//             MoveTo(destination);
+//         }
+
+//         public void MoveTo(Vector3 destination)
+//         {
+//             navMeshAgent.destination = destination;
+//             navMeshAgent.isStopped = false;
+//         }
+
+//         public void Stop()
+//         {
+//             navMeshAgent.isStopped = true;
+//         }
+
+//         private void UpdateAnimator()
+//         {
+//             Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+//             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+//             float speed = localVelocity.z;
+//             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+//         }
+
+//         private bool isMovingWithKeyboard = false; // 키보드 이동 상태 추적
+
+//         public void MoveWithKeyboard()
+//         {
+
+//             isMovingWithKeyboard = true; // 키보드로 이동 시작
+
+//             float horizontal = Input.GetAxis("Horizontal");
+//             float vertical = Input.GetAxis("Vertical");
+//             Vector3 inputDirection = new Vector3(horizontal, 0, vertical).normalized; // 입력 방향 정규화
+
+//             if (inputDirection.sqrMagnitude > 0.01f)
+//             {
+//                 // 입력에 따라 캐릭터의 위치 조정
+//                 navMeshAgent.destination = transform.position + inputDirection;
+//                 navMeshAgent.isStopped = false; // 목적지로 계속 이동하도록 함
+//             }
+//         }
+
+        
+//     }
+// }
+
+// 마우스가 아닌 키보드를 이용해서 움직이는 코드 <기존 코드>
+// using RPG.Combat;
 // using RPG.Control;
 // using UnityEngine;
 // using UnityEngine.AI;
@@ -103,6 +188,12 @@ namespace RPG.Movement
 //             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
 //             float forwardSpeed = localVelocity.z;
 //             animator.SetFloat("forwardSpeed", forwardSpeed);
+//         }
+
+//         public void StartMoveAction(Vector3 destination)     // 추가된 부분
+//         {
+//             GetComponent<Fighter>().Cancle();
+//             MoveTo(destination);
 //         }
 
 //         // 지정된 위치로 이동하는 기능을 수행합니다.
