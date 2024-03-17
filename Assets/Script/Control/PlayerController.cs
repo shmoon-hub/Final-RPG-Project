@@ -1,3 +1,5 @@
+using System;
+using RPG.Combat;
 using RPG.Movement;
 using UnityEngine;
 
@@ -5,24 +7,52 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour {
 
-    private void Update() {
-        if(Input.GetMouseButton(0))   // 0은 왼쪽 1은 오른쪽 2는 중간버튼을 의미한다. , 마우스가 눌러져있는동안 true를 반환하고 싶으면 GetMouseButton으로 수정한다.
+    private void Update()
         {
-            MoveToCursor();
+            InteractWithCombat();
+            InteractWithMovement();
         }
-    }
 
-     private void MoveToCursor()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);   // 메인카메라를 lastray 로 가져온다.
-        RaycastHit hit;       // 충돌 지점을 정보를 담고있는 구조체 (마우스를 클릭했을때)
-        bool hasHit = Physics.Raycast(ray,out hit); //hasHit은 true 혹은 false를 반환
-        if (hasHit == true)
+        private void InteractWithCombat()
         {
-            GetComponent<Mover>().MoveTo(hit.point);
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits)
+            {
+                CombatTarget target = hit.transform.GetComponent<CombatTarget>();
+                if (target == null) continue;
+                
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GetComponent<Fighter>().Attack(target);
+                }
+            }
+            //throw new NotImplementedException();
+        }
+
+        private void InteractWithMovement()
+        {
+            if (Input.GetMouseButton(0))   // 0은 왼쪽 1은 오른쪽 2는 중간버튼을 의미한다. , 마우스가 눌러져있는동안 true를 반환하고 싶으면 GetMouseButton으로 수정한다.
+            {
+                MoveToCursor();
+            }
+        }
+
+        private void MoveToCursor()
+        {
+            RaycastHit hit;       // 충돌 지점을 정보를 담고있는 구조체 (마우스를 클릭했을때)
+            bool hasHit = Physics.Raycast(GetMouseRay(), out hit); //hasHit은 true 혹은 false를 반환
+            if (hasHit == true)
+            {
+                GetComponent<Mover>().MoveTo(hit.point);
+            }
+        }
+
+        private static Ray GetMouseRay()
+        {
+            return Camera.main.ScreenPointToRay(Input.mousePosition);
+            // 메인카메라를 lastray 로 가져온다.
         }
     }
-}
 }
 
 
