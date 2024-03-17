@@ -15,19 +15,30 @@ namespace RPG.Movement
     {
         [SerializeField] Transform target; // 이동 타겟 지정
 
+        NavMeshAgent navMeshAgent;
+
+        
+        private void Start()
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
         // Ray lastRay;  레이캐스팅 구현을 위해 레이 타입의 변수 생성
 
         void Update()
         {
-
             UpdateAnimator();
         }
 
-
-
         public void MoveTo(Vector3 destination)      // 메서드 추출 기능을 통해 새로운 메서드로 추출 , 외부에서 가져올수 있어야 하므로 public으로 변경
         {
-            GetComponent<NavMeshAgent>().destination = destination; // hasHit이 true이면 내비메시 에이전트의 목적지를 레이캐스트 중돌지점으로 변경
+            navMeshAgent.destination = destination; // hasHit이 true이면 내비메시 에이전트의 목적지를 레이캐스트 중돌지점으로 변경
+            navMeshAgent.isStopped = false;
+        }
+
+        public void Stop()
+        {
+            navMeshAgent.isStopped = true;
         }
 
         private void UpdateAnimator()
