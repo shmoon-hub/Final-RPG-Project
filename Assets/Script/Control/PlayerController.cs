@@ -72,10 +72,12 @@ namespace RPG.Control
 //         public NavMeshAgent Agent => agent;
 
 //         private NavMeshAgent agent;
+//         private Fighter fighter;
 
 //         private void Awake()
 //         {
 //             agent = GetComponent<NavMeshAgent>();
+//             fighter = GetComponent<Fighter>(); // Fighter 컴포넌트를 가져옵니다.
 //         }
 
 //         private void Update()
@@ -95,7 +97,7 @@ namespace RPG.Control
                 
 //                 if (Input.GetMouseButtonDown(0))
 //                 {
-//                     GetComponent<Fighter>().Attack(target);
+//                     fighter.Attack(target);
 //                     return true;
 //                 }
 //             }
@@ -130,8 +132,6 @@ namespace RPG.Control
 //             }
 //             return false; // 히트 실패
 //         }
-
-        
 
 //         private static Ray GetMouseRay()
 //         {

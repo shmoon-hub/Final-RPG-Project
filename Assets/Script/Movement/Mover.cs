@@ -70,8 +70,6 @@ namespace RPG.Movement
 //             agent = GetComponent<NavMeshAgent>();
 //         }
 
-        
-
 //         Animator animator;
 //         PlayerController playerController;
 
@@ -91,13 +89,13 @@ namespace RPG.Movement
 //             float horizontal = Input.GetAxis("Horizontal");
 //             float vertical = Input.GetAxis("Vertical");
 //             Vector3 inputDirection = new Vector3(horizontal, 0f, vertical);
-            
+
 //             if (inputDirection.sqrMagnitude > 0.01f)
 //             {
 //                 agent.destination = transform.position + inputDirection;
 //             }
 //         }
-        
+
 //         private void UpdateAnimator()
 //         {
 //             // PlayerController에서 NavMeshAgent 접근자를 통해 velocity를 가져옵니다.
@@ -105,6 +103,19 @@ namespace RPG.Movement
 //             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
 //             float forwardSpeed = localVelocity.z;
 //             animator.SetFloat("forwardSpeed", forwardSpeed);
+//         }
+
+//         // 지정된 위치로 이동하는 기능을 수행합니다.
+//         public void MoveTo(Vector3 destination)
+//         {
+//             agent.destination = destination;
+//             agent.isStopped = false;
+//         }
+
+//         // 캐릭터의 이동을 중지합니다.
+//         public void Stop()
+//         {
+//             agent.isStopped = true;
 //         }
 //     }
 // }
