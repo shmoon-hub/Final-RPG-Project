@@ -63,18 +63,19 @@ namespace RPG.Movement
 
 //         void Update()
 //         {
-//             playerController.Move(); // PlayerController의 Move 메서드를 호출합니다.
 //             UpdateAnimator();
 //         }
         
 //         private void UpdateAnimator()
 //         {
-//             Vector3 velocity = playerController.Agent.velocity; // agent.velocity 대신 사용
+//             // PlayerController에서 NavMeshAgent 접근자를 통해 velocity를 가져옵니다.
+//             Vector3 velocity = playerController.Agent.velocity;
 //             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
 //             float forwardSpeed = localVelocity.z;
 //             animator.SetFloat("forwardSpeed", forwardSpeed);
 //         }
 //     }
 // }
+
 
 
