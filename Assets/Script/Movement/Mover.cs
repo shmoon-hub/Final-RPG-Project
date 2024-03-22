@@ -15,7 +15,7 @@ using UnityEngine.AI;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour
+    public class Mover : MonoBehaviour, IAction
     {
         [SerializeField] Transform target; // 이동 타겟 지정
 
@@ -37,7 +37,7 @@ namespace RPG.Movement
         public void StartMoveAction(Vector3 destination)     // 추가된 부분
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            GetComponent<Fighter>().Cancel();
+            //GetComponent<Fighter>().Cancel();
             MoveTo(destination);
         }
 
@@ -47,7 +47,12 @@ namespace RPG.Movement
             navMeshAgent.isStopped = false;
         }
 
-        public void Stop()
+        // public void Stop()
+        // {
+        //     navMeshAgent.isStopped = true;
+        // }
+
+        public void Cancel()
         {
             navMeshAgent.isStopped = true;
         }
