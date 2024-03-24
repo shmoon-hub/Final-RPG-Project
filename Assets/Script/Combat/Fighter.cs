@@ -34,17 +34,27 @@ namespace RPG.Combat
         private void AttackBehaviour()
         {
             transform.LookAt(target.transform);   // 유니티 문서에서 지원하는 기능, 적을 향해 서도록 회전하는 기능
-            if (timeSinceLastAttack > timeBetweenAttacks) 
+            if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 // This will trigger the Hit() event.
-                GetComponent<Animator>().SetTrigger("attack");
+                TriggerAttack();
                 timeSinceLastAttack = 0;
             }
+        }
+
+        private void TriggerAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("stopAttack");
+            GetComponent<Animator>().SetTrigger("attack");
         }
 
         // Animation Event
         void Hit()
         {
+            if (target == null)
+            {
+                return;
+            }
             target.TakeDamage(weaponDamage);
         }
 
@@ -71,8 +81,14 @@ namespace RPG.Combat
 
         public void Cancel()
         {
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            stopAttack();
             target = null;
+        }
+
+        private void stopAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("stopAttack");
         }
     }
 }

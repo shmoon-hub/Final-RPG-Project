@@ -16,6 +16,8 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour {
 
+    [SerializeField] float moveSpeed = 5f; // 필요에 따라 이동 속도 조절
+
     private void Update()
         {
             if (InteractWithCombat()) return;
@@ -67,10 +69,12 @@ namespace RPG.Control
             return Camera.main.ScreenPointToRay(Input.mousePosition);
             // 메인카메라를 lastray 로 가져온다.
         }
+
+        
     }
 }
 
-// 키보드로 이동하고 마우스로 적을 공격하는 부분 <새로 만든 코드>
+// // 키보드로 이동하고 마우스로 적을 공격하는 부분 <새로 만든 코드>
 // using System;
 // using RPG.Combat;
 // using RPG.Movement;
@@ -96,7 +100,11 @@ namespace RPG.Control
 //             foreach (RaycastHit hit in hits)
 //             {
 //                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-//                 if (target == null) continue;
+//                 // 수정된 부분
+//                 if (!GetComponent<Fighter>().CanAttack(target))
+//                 {
+//                     continue;
+//                 }
                 
 //                 if (Input.GetMouseButtonDown(0))
 //                 {
@@ -212,3 +220,4 @@ namespace RPG.Control
 //         }
 //     }
 // }
+

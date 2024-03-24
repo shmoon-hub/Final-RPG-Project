@@ -164,6 +164,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &240266958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7570368975056138644, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
+  m_PrefabInstance: {fileID: 753962700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294336978
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3010885279734509457, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 240266958}
     - target: {fileID: 7570368975056138644, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.2942967
@@ -1137,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 6082035905890099098, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388829673488614145, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
