@@ -33,6 +33,7 @@ namespace RPG.Combat
 
         private void AttackBehaviour()
         {
+            transform.LookAt(target.transform);   // 유니티 문서에서 지원하는 기능, 적을 향해 서도록 회전하는 기능
             if (timeSinceLastAttack > timeBetweenAttacks) 
             {
                 // This will trigger the Hit() event.
