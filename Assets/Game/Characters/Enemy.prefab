@@ -50,6 +50,10 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: 41462ae3a58b8f04abff74d551d5f890, type: 3}
+    - target: {fileID: 1906430560, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3079571255747531949, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_Name
       value: Enemy
