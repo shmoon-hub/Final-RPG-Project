@@ -10,6 +10,7 @@ namespace RPG.Control
     public class AIController : MonoBehaviour
     {
         [SerializeField] float chaseDistance = 5f;
+        [SerializeField] float suspicionTime = 3f; // 의심 행동 대기시간
 
         Fighter fighter;
 
@@ -18,6 +19,7 @@ namespace RPG.Control
         GameObject player;
 
         Vector3 guardLocation;      // 제자리로 돌아갈수 있도록 변수 설정
+        float timeSinceLastSawPlayer = Mathf.Infinity;
 
         private void Start() {
             fighter = GetComponent<Fighter>();
@@ -34,13 +36,36 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                fighter.Attack(player);
+                timeSinceLastSawPlayer = 0;
+                AttackBehavior();
+            }
+            else if (timeSinceLastSawPlayer < suspicionTime)
+            {
+                suspicionBehavior();
             }
             else
             {
-                mover.StartMoveAction(guardLocation);
+                GuardBehavior();
             }
+
+            timeSinceLastSawPlayer += Time.deltaTime;
         }
+
+        private void GuardBehavior()
+        {
+            mover.StartMoveAction(guardLocation);
+        }
+
+        private void suspicionBehavior()
+        {
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+
+        private void AttackBehavior()
+        {
+            fighter.Attack(player);
+        }
+
         private bool InAttackRangeOfPlayer()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
