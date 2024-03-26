@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677022af44572e642bbb5a4c80ce2a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5523075767382598679
+--- !u!114 &8496650477455278794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,10 +35,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 248829962980895075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ee7f73d8e98004b8c41c44bfa763fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 330d4a1c95c2719459fc8484c69fafc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &2605308539631954602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248829962980895075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03304f867a08b4e49b91aaa11568dc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
+--- !u!114 &4129468230472319330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248829962980895075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961a3d8bfa42f964c928796ecc0cb5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponRange: 2
+  timeBetweenAttacks: 1
+  weaponDamage: 5
 --- !u!1001 &3010885280567066062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,6 +144,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5714637960189883416, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+    - {fileID: 1906430559, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+    - {fileID: 1752194527628773430, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
 --- !u!1 &248829962980895075 stripped
 GameObject:

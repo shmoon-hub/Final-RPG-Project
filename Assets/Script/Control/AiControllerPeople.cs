@@ -8,30 +8,31 @@ namespace RPG.Control
 {
     public class AiControllerPeople : MonoBehaviour
     {
-        [SerializeField] float chaseDistance = 5f;
+         [SerializeField] float chaseDistance = 5f;
 
         FighterPeople fighterpeople;
+        Health health;
         GameObject player;
 
         private void Start() {
             fighterpeople = GetComponent<FighterPeople>();
+            health = GetComponent<Health>();
             player = GameObject.FindWithTag("Player");
         }
 
         private void Update()
         {
+            if (health.IsDead()) return;
+
             if (InAttackRangeOfPlayer() && fighterpeople.CanAttack(player))
             {
                 fighterpeople.Attack(player);
             }
             else
             {
-                //print(gameObject.name + " Should chase");
                 fighterpeople.Cancel();
             }
         }
-
-
         private bool InAttackRangeOfPlayer()
         {
             float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);

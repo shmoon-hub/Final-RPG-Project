@@ -12,16 +12,20 @@ namespace RPG.Movement
 
         NavMeshAgent navMeshAgent;
 
+        Health health;
+
 
         private void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         // Ray lastRay;  레이캐스팅 구현을 위해 레이 타입의 변수 생성
 
         void Update()
         {
+            navMeshAgent.enabled = !health.IsDead();
             UpdateAnimator();
         }
 

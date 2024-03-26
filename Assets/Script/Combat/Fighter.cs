@@ -11,7 +11,7 @@ namespace RPG.Combat
         [SerializeField] float weaponDamage = 5f;
 
         Health target;
-        float timeSinceLastAttack = 0;
+        float timeSinceLastAttack = Mathf.Infinity; // 0이 아닌 Mathf.Infinity를 이용하여 즉각적으로 반응하도록 함
 
         private void Update()
         {
