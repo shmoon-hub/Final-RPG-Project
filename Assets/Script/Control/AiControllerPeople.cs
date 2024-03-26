@@ -13,6 +13,10 @@ namespace RPG.Control
 
         [SerializeField] float suspicionTime = 3f; // 의심 행동 대기시간
 
+        [SerializeField] PatrolPath patrolPath;    // Patrol Path 구현
+
+        [SerializeField] float waypointTolerance = 1f;
+
         FighterPeople fighterpeople;
 
         PeopleMover peopleMover;
@@ -22,6 +26,8 @@ namespace RPG.Control
         Vector3 guardLocation;
 
         float timeSinceLastSawPlayer = Mathf.Infinity;
+
+        int currentWaypointIndex = 0;
 
         private void Start() {
             fighterpeople = GetComponent<FighterPeople>();
@@ -47,15 +53,42 @@ namespace RPG.Control
             }
             else
             {
-                GuardBehavior();
+                PatrolBehavior();
             }
 
             timeSinceLastSawPlayer += Time.deltaTime;
         }
 
-        private void GuardBehavior()
+        private void PatrolBehavior()
         {
-            peopleMover.StartMoveAction(guardLocation);
+            Vector3 nextPosition = guardLocation;
+
+            if (patrolPath != null)
+            {
+                if(Atwaypoint())
+                {
+                    CycleWaypoint();
+                }
+                nextPosition = GetCurrentWaypoint();
+            }
+
+            peopleMover.StartMoveAction(nextPosition);
+        }
+
+        private bool Atwaypoint()
+        {
+            float distanceToWaypoint  = Vector3.Distance(transform.position, GetCurrentWaypoint());
+            return distanceToWaypoint < waypointTolerance;
+        }
+
+        private void CycleWaypoint()
+        {
+            currentWaypointIndex = patrolPath.GetNextIndex(currentWaypointIndex);
+        }
+
+        private Vector3 GetCurrentWaypoint()
+        {
+            return patrolPath.GetWaypoint(currentWaypointIndex);
         }
 
         private void suspicionBehavior()
