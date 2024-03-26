@@ -82,6 +82,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b8a1a521e5535784896e824c1cc4aeab, type: 2}
+    - target: {fileID: 1906430560, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3079571255747531949, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_Name
       value: Enemy (1)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Combat;
 using RPG.Core;
+using RPG.Movement;
 using UnityEngine;
 
 namespace RPG.Control
@@ -11,13 +12,20 @@ namespace RPG.Control
          [SerializeField] float chaseDistance = 5f;
 
         FighterPeople fighterpeople;
+
+        PeopleMover peopleMover;
         Health health;
         GameObject player;
+
+        Vector3 guardLocation;
 
         private void Start() {
             fighterpeople = GetComponent<FighterPeople>();
             health = GetComponent<Health>();
+            peopleMover = GetComponent<PeopleMover>();
             player = GameObject.FindWithTag("Player");
+
+            guardLocation = transform.position;
         }
 
         private void Update()
@@ -30,7 +38,7 @@ namespace RPG.Control
             }
             else
             {
-                fighterpeople.Cancel();
+                peopleMover.StartMoveAction(guardLocation);
             }
         }
         private bool InAttackRangeOfPlayer()
