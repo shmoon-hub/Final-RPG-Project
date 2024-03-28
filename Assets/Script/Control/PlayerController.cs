@@ -55,7 +55,7 @@
 //             {
 //                 if(Input.GetMouseButton(0))
 //                 {
-//                     GetComponent<Mover>().StartMoveAction(hit.point);     // MoveTo를 StartMoveAction으로 바꿈
+//                     GetComponent<Mover>().StartMoveAction(hit.point, 1f);     // MoveTo를 StartMoveAction으로 바꿈
 //                 }
 //                 return true;
 //             }
@@ -126,7 +126,7 @@ namespace RPG.Control
             {
                 if(Input.GetMouseButton(0))
                 {
-                    GetComponent<Mover>().StartMoveAction(hit.point);     // MoveTo를 StartMoveAction으로 바꿈
+                    GetComponent<PeopleMover>().StartMoveAction(hit.point,1f);     // MoveTo를 StartMoveAction으로 바꿈
                 }
                 return true;
             }

@@ -19,6 +19,8 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath;   // Patrol Path 구현
         [SerializeField] float waypointTolerance = 1f;   //적이 순찰지점에 도달했다고 간주되는 거리의 한계값
         [SerializeField] float waypointDwellTime = 3f;   // 웨이포인트에서 일정한 시간을 두고 캐릭터가 움직일수 있게 하는 변수
+        [Range(0,1)]  //patrolSpeedFraction 변수가 반드시 0과 1 사이의 값이어야 한다는 의미
+        [SerializeField] float patrolSpeedFraction = 0.2f; // maxSpeed 의 20%를 의미
 
         FighterPeople fighterpeople;  //적이 공격을 수행할 수 있게 하는 컴포넌트
         Health health;   // 체력을 나타냄
@@ -78,7 +80,7 @@ namespace RPG.Control
 
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
-                peopleMover.StartMoveAction(nextPosition);  //순찰 경로가 없거나 순찰지점이 더 이상 없다면, 초기 위치(guardLocation)로 이동
+                peopleMover.StartMoveAction(nextPosition, patrolSpeedFraction);  //순찰 경로가 없거나 순찰지점이 더 이상 없다면, 초기 위치(guardLocation)로 이동
             }
         }
 

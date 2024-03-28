@@ -85,6 +85,8 @@ namespace RPG.Movement
     {
         [SerializeField] Transform target; // 이동 대상 지정
 
+        [SerializeField] float maxSpeed = 6f;  // 최대 속도 6으로 설정
+
         NavMeshAgent navMeshAgent;
 
         Health health;
@@ -103,16 +105,17 @@ namespace RPG.Movement
             MoveWithKeyboard(); // Update 메소드에서 MoveWithKeyboard 호출
         }
 
-        public void StartMoveAction(Vector3 destination)
+        public void StartMoveAction(Vector3 destination, float speedFraction)
         {
             GetComponent<ActionScheduler>().StartAction(this);
             //GetComponent<Fighter>().Cancel(); // Cancel 메소드의 올바른 철자 확인
-            MoveTo(destination);
+            MoveTo(destination, speedFraction);
         }
 
-        public void MoveTo(Vector3 destination)
+        public void MoveTo(Vector3 destination, float speedFraction)
         {
             navMeshAgent.destination = destination;
+            navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
         }
 
