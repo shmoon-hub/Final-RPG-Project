@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamage: 5
+  weaponDamage: 10
 --- !u!114 &3133573232793857536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +68,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspicionTime: 5
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
 --- !u!1001 &3740821295021967207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +90,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1752194527628773430, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3079571255747531949, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -97,19 +104,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4392479842683558957, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: healthPoints
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4667851602101341274, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.518057
+      value: -7.01
       objectReference: {fileID: 0}
     - target: {fileID: 4667851602101341274, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.85
+      value: 1.5015545
       objectReference: {fileID: 0}
     - target: {fileID: 4667851602101341274, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.6406622
+      value: 6.39
       objectReference: {fileID: 0}
     - target: {fileID: 4667851602101341274, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
       propertyPath: m_LocalRotation.x
@@ -150,6 +157,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5714637960189883416, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
     - {fileID: 1906430559, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
+    - {fileID: 1752194527628773430, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8083d0d593d5d2d4dbefb03c91e06c74, type: 3}
 --- !u!1 &1825862857356841930 stripped
 GameObject:

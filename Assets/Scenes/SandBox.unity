@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamage: 5
+  weaponDamage: 10
 --- !u!114 &116532306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d013fd0a676f75341ab84adc3bde624e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 20
+  healthPoints: 40
 --- !u!114 &116532311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,9 +328,13 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 389374245897674915, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1825862857356841930, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Enemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2450431042161637194, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
       propertyPath: m_IsTrigger
@@ -989,8 +993,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 248829962980895075, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Tough Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1530635706887660003, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
+      propertyPath: healthPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135835585701582909, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ccae2dc6cf6f0c4479b782fedd0c8172, type: 2}
     - target: {fileID: 2605308539631954602, guid: 41b81d7639ca4aa4c88a031c51828cc4, type: 3}
       propertyPath: patrolPath
       value: 
@@ -1321,16 +1333,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1825862857356841930, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: 'Enemy '
       objectReference: {fileID: 0}
     - target: {fileID: 6645829823405317761, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
       propertyPath: patrolPath
       value: 
       objectReference: {fileID: 6983022103161260962}
-    - target: {fileID: 6645829823405317761, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
-      propertyPath: waypointDwellTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8299460563948096317, guid: f795a4f7047a1554ba475edfb6a384ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.01
@@ -1435,7 +1443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4768845769851688730, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
       propertyPath: healthPoints
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6082035905890099098, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
       propertyPath: m_Name
@@ -1448,6 +1456,10 @@ PrefabInstance:
     - target: {fileID: 7388829673488614145, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
       propertyPath: timeBetweenAttacks
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388829673488614145, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
+      propertyPath: weaponDamage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9141021721712129046, guid: cadf762cd463e244ea632e8b05e48a7f, type: 3}
       propertyPath: m_Controller
