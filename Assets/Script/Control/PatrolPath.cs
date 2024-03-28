@@ -1,4 +1,8 @@
-﻿﻿using System.Collections;
+﻿﻿/////////////////////////////////////
+// ai 순찰 경로를 나타내는 소스코드  //
+/////////////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace RPG.Control

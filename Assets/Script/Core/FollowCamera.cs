@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/////////////////////////////////////
+// 플레이어를 따라 움직이는         //
+// followCamera를 나타내는 소스코드 //
+////////////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

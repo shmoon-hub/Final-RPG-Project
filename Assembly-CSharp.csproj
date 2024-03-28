@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Control\AiController.cs" />
      <Compile Include="Assets\MyAsset\Polytope Studio\Lowpoly_Characters\Sources\Scripts\PT_Create_Prefab.cs" />
      <Compile Include="Assets\Script\Combat\Fighter.cs" />
      <Compile Include="Assets\Script\Control\AiControllerPeople.cs" />
@@ -49,9 +48,9 @@
      <Compile Include="Assets\Script\Movement\PeopleMover.cs" />
      <Compile Include="Assets\Script\Core\IAction.cs" />
      <Compile Include="Assets\Script\Core\ActionScheduler.cs" />
+     <Compile Include="Assets\Script\Control\PatrolPath.cs" />
      <Compile Include="Assets\MyAsset\Blink\Art\Animals\Stylized\Demo_Animals\DemoData\AnimationDemo.cs" />
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
-     <Compile Include="Assets\Script\Control\PatrolPath.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Characters\Sources\Modular_NPC\Shaders\PT_Modular_NPC_Shader_Toon.shader" />
