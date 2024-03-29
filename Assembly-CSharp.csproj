@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\Control\PatrolPath.cs" />
      <Compile Include="Assets\MyAsset\Blink\Art\Animals\Stylized\Demo_Animals\DemoData\AnimationDemo.cs" />
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
+     <Compile Include="Assets\Script\Cinematics\CinematicsTrigger.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Characters\Sources\Modular_NPC\Shaders\PT_Modular_NPC_Shader_Toon.shader" />
@@ -607,6 +608,9 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -621,6 +625,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>

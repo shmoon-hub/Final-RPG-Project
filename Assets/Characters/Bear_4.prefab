@@ -16,9 +16,8 @@ GameObject:
   - component: {fileID: 7975211892200951996}
   - component: {fileID: 7975211892200951997}
   - component: {fileID: 7975211892200951987}
-  - component: {fileID: 1747374138336778032}
-  - component: {fileID: 2152781523162367869}
   - component: {fileID: 7975211892061002445}
+  - component: {fileID: 2122786421252695064}
   m_Layer: 0
   m_Name: Bear_4
   m_TagString: Untagged
@@ -175,34 +174,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1747374138336778032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59336770645544772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a461213bbd491134a852538ca0b76015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseDistance: 5
---- !u!114 &2152781523162367869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59336770645544772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45feb1bc460c022479db63dd0b3463dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponRange: 2
-  timeBetweenAttacks: 1
-  weaponDamage: 5
 --- !u!114 &7975211892061002445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +187,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  maxSpeed: 6
+--- !u!114 &2122786421252695064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59336770645544772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03304f867a08b4e49b91aaa11568dc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
+  suspicionTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
 --- !u!1 &117979573530509854
 GameObject:
   m_ObjectHideFlags: 0
