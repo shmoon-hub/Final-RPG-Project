@@ -84,6 +84,7 @@ namespace RPG.Combat
         {
             stopAttack();
             target = null;
+            GetComponent<PeopleMover>().Cancel();   // 기존 Mover
         }
 
         private void stopAttack()
