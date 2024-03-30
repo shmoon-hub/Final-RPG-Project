@@ -38,7 +38,6 @@
   <ItemGroup>
      <Compile Include="Assets\MyAsset\Polytope Studio\Lowpoly_Characters\Sources\Scripts\PT_Create_Prefab.cs" />
      <Compile Include="Assets\Script\Combat\Fighter.cs" />
-     <Compile Include="Assets\Script\Cinematics\CinematicControlRemover.cs" />
      <Compile Include="Assets\Script\Cinematics\CinematicsTrigger.cs" />
      <Compile Include="Assets\Script\Control\AiControllerPeople.cs" />
      <Compile Include="Assets\Script\Control\PlayerController.cs" />
@@ -53,6 +52,7 @@
      <Compile Include="Assets\Script\Control\PatrolPath.cs" />
      <Compile Include="Assets\MyAsset\Blink\Art\Animals\Stylized\Demo_Animals\DemoData\AnimationDemo.cs" />
      <Compile Include="Assets\Script\Combat\CombatTarget.cs" />
+     <Compile Include="Assets\Script\Cinematics\CinematicControlRemover.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader_WebGl.shader" />
      <None Include="Assets\MyAsset\Polytope Studio\Lowpoly_Characters\Sources\Modular_NPC\Shaders\PT_Modular_NPC_Shader_Toon.shader" />
@@ -260,15 +260,6 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.10f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="clipper_library">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/PackageCache/com.unity.cinemachine@2.8.3/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -647,39 +638,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TerrainTools">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TerrainTools.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:/Users/shmoo/Final RPG Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
