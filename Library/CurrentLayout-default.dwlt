@@ -40,10 +40,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1043
     y: 0
     width: 217
     height: 271
+=======
+    x: 871.2
+    y: 0
+    width: 385.60004
+    height: 282
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     x: 871.2
     y: 0
@@ -78,6 +85,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 452
     width: 1260
     height: 271
@@ -85,6 +93,15 @@ MonoBehaviour:
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 161
+=======
+    y: 440.8
+    width: 1256.8
+    height: 282
+  m_MinSize: {x: 203, y: 121}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 193
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     y: 440.8
     width: 1256.8
@@ -110,10 +127,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1003
     y: 0
     width: 257
     height: 452
+=======
+    x: 761.6
+    y: 0
+    width: 495.20007
+    height: 440.8
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     x: 761.6
     y: 0
@@ -149,9 +173,12 @@ MonoBehaviour:
     y: 0
     width: 1536
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 773
   m_MinSize: {x: 875, y: 542}
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     height: 772.8
   m_MinSize: {x: 875, y: 300}
 >>>>>>> parent of e3031a64 (Notice!)
@@ -202,7 +229,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 753
+=======
+    y: 752.8
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     y: 752.8
 >>>>>>> parent of e3031a64 (Notice!)
@@ -231,11 +262,19 @@ MonoBehaviour:
     y: 30
     width: 1536
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 723
   m_MinSize: {x: 1481, y: 392}
   m_MaxSize: {x: 16006, y: 8042}
   vertical: 0
   controlID: 63
+=======
+    height: 722.8
+  m_MinSize: {x: 906, y: 381}
+  m_MaxSize: {x: 16006, y: 8042}
+  vertical: 0
+  controlID: 233
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     height: 722.8
   m_MinSize: {x: 906, y: 381}
@@ -263,12 +302,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1260
     height: 723
   m_MinSize: {x: 1205, y: 392}
   m_MaxSize: {x: 12005, y: 8042}
   vertical: 1
   controlID: 64
+=======
+    width: 1256.8
+    height: 722.8
+  m_MinSize: {x: 605, y: 342}
+  m_MaxSize: {x: 12005, y: 8042}
+  vertical: 1
+  controlID: 192
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     width: 1256.8
     height: 722.8
@@ -298,12 +346,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1260
     height: 452
   m_MinSize: {x: 1205, y: 271}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
   controlID: 65
+=======
+    width: 1256.8
+    height: 440.8
+  m_MinSize: {x: 605, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
+  vertical: 0
+  controlID: 100
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     width: 1256.8
     height: 440.8
@@ -330,12 +387,15 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 201
     height: 452
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     width: 240
     height: 440.8
   m_MinSize: {x: 200, y: 200}
@@ -362,6 +422,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 201
     y: 0
     width: 802
@@ -372,6 +433,10 @@ MonoBehaviour:
 =======
     x: 240
     y: 0
+=======
+    x: 240
+    y: 0
+>>>>>>> parent of e3031a64 (Notice!)
     width: 521.6
     height: 440.8
   m_MinSize: {x: 202, y: 221}
@@ -401,12 +466,15 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1043
     height: 271
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 25}
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     width: 871.2
     height: 282
   m_MinSize: {x: 100, y: 100}
@@ -434,6 +502,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1260
     y: 0
     width: 276
@@ -450,6 +519,10 @@ MonoBehaviour:
 =======
     x: 1256.8
     y: 0
+=======
+    x: 1256.8
+    y: 0
+>>>>>>> parent of e3031a64 (Notice!)
     width: 279.19995
     height: 722.8
   m_MinSize: {x: 300, y: 360}
@@ -460,6 +533,9 @@ MonoBehaviour:
   - {fileID: 19}
   m_Selected: 1
   m_LastSelected: 0
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
 --- !u!114 &15
 MonoBehaviour:
@@ -574,9 +650,12 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: -2774
 --- !u!114 &19
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
   m_LastSelectedObjectID: 14652
 --- !u!114 &18
 >>>>>>> parent of e3031a64 (Notice!)
@@ -600,15 +679,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1043.2001
     y: 525.60004
     width: 215
     height: 250
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     x: 871.2
     y: 514.4
     width: 383.60004
     height: 261
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
@@ -623,7 +708,11 @@ MonoBehaviour:
       e01: 0
       e02: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       e03: -141.6392
+=======
+      e03: -112.680115
+>>>>>>> parent of e3031a64 (Notice!)
 =======
       e03: -112.680115
 >>>>>>> parent of e3031a64 (Notice!)
@@ -740,10 +829,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1144.8
     y: 73.6
     width: 390
     height: 702
+=======
+    x: 1256.8
+    y: 73.6
+    width: 278.19995
+    height: 701.8
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     x: 1256.8
     y: 73.6
@@ -772,15 +868,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1003.2
     y: 73.6
     width: 255
     height: 431
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     x: 761.60004
     y: 73.6
     width: 493.20007
     height: 419.8
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
@@ -790,7 +892,11 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 255, y: 410}
+=======
+  m_TargetSize: {x: 493.20007, y: 398.8}
+>>>>>>> parent of e3031a64 (Notice!)
 =======
   m_TargetSize: {x: 493.20007, y: 398.8}
 >>>>>>> parent of e3031a64 (Notice!)
@@ -809,15 +915,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -102
     m_HBaseRangeMax: 102
     m_VBaseRangeMin: -164
     m_VBaseRangeMax: 164
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     m_HBaseRangeMin: -197.28003
     m_HBaseRangeMax: 197.28003
     m_VBaseRangeMin: -159.52
     m_VBaseRangeMax: 159.52
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -837,15 +949,21 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 255
       height: 410
     m_Scale: {x: 1.2644907, y: 1.2644905}
     m_Translation: {x: 128.29059, y: 204.50797}
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
       width: 493.20007
       height: 398.8
     m_Scale: {x: 1.3625505, y: 1.3625505}
     m_Translation: {x: 254.87125, y: 195.478}
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -854,6 +972,7 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -101.45633
       y: -161.73152
       width: 201.66222
@@ -861,6 +980,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 318.75, y: 538.75}
+=======
+      x: -187.05453
+      y: -143.46477
+      width: 361.9683
+      height: 292.6864
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 616.5001, y: 524.75}
+>>>>>>> parent of e3031a64 (Notice!)
 =======
       x: -187.05453
       y: -143.46477
@@ -898,8 +1026,13 @@ MonoBehaviour:
     x: 0
     y: 73.6
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 200
     height: 431
+=======
+    width: 239
+    height: 419.8
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     width: 239
     height: 419.8
@@ -909,9 +1042,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 22f5ffff
       m_LastClickedID: 0
       m_ExpandedIDs: 04faffff
+=======
+      m_SelectedIDs: e6380000
+      m_LastClickedID: 14566
+      m_ExpandedIDs: 3efbffffda38000086390000
+>>>>>>> parent of e3031a64 (Notice!)
 =======
       m_SelectedIDs: e6380000
       m_LastClickedID: 14566
@@ -961,15 +1100,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 200.8
     y: 73.6
     width: 800
     height: 431
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     x: 240
     y: 73.6
     width: 519.6
     height: 419.8
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -1037,9 +1182,15 @@ MonoBehaviour:
     m_Value: {x: -0.12783803, y: 0.8718815, z: -0.32221738, w: -0.34591362}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 62.46651
     speed: 2
     m_Value: 62.46651
+=======
+    m_Target: 36.15051
+    speed: 2
+    m_Value: 36.15051
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     m_Target: 36.15051
     speed: 2
@@ -1134,6 +1285,9 @@ MonoBehaviour:
     m_SelectedIDs: 6c440000
     m_LastClickedID: 17516
     m_ExpandedIDs: 00000000fc430000fe43000000440000024400000444000006440000084400000a4400000c4400000e44000010440000124400001444000016440000184400001a4400001c4400001e44000020440000224400002444000026440000284400002a4400002c4400002e4400006a44000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1163,7 +1317,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000088d000008ad000008cd000008ed0000090d0000092d0000094d0000096d0000098d000009ad000009cd000009ed00000a0d00000a2d00000a4d00000a6d00000a8d00000aad00000acd00000aed00000b0d00000b2d00000b4d00000b6d00000b8d00000bad00000
+=======
+    m_ExpandedIDs: 00000000fc430000fe43000000440000024400000444000006440000084400000a4400000c4400000e44000010440000124400001444000016440000184400001a4400001c4400001e44000020440000224400002444000026440000284400002a4400002c4400002e440000
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     m_ExpandedIDs: 00000000fc430000fe43000000440000024400000444000006440000084400000a4400000c4400000e44000010440000124400001444000016440000184400001a4400001c4400001e44000020440000224400002444000026440000284400002a4400002c4400002e440000
 >>>>>>> parent of e3031a64 (Notice!)
@@ -1192,10 +1350,13 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 22f5ffff
     m_LastClickedInstanceID: -2782
     m_HadKeyboardFocusLastEvent: 0
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     m_SelectedInstanceIDs: e6380000
     m_LastClickedInstanceID: 14566
     m_HadKeyboardFocusLastEvent: 1
@@ -1250,9 +1411,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 525.60004
     width: 1042
     height: 250
+=======
+    y: 514.4
+    width: 870.2
+    height: 261
+>>>>>>> parent of e3031a64 (Notice!)
 =======
     y: 514.4
     width: 870.2
@@ -1280,15 +1447,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1260
     y: 73.6
     width: 275
     height: 702
 =======
+=======
+>>>>>>> parent of e3031a64 (Notice!)
     x: 1256.8
     y: 73.6
     width: 278.19995
     height: 701.8
+<<<<<<< HEAD
+>>>>>>> parent of e3031a64 (Notice!)
+=======
 >>>>>>> parent of e3031a64 (Notice!)
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -1298,7 +1471,11 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastInspectedObjectInstanceID: -1
+=======
+  m_LastInspectedObjectInstanceID: 14566
+>>>>>>> parent of e3031a64 (Notice!)
 =======
   m_LastInspectedObjectInstanceID: 14566
 >>>>>>> parent of e3031a64 (Notice!)
